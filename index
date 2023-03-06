@@ -1,0 +1,39 @@
+Pergunta 2)
+
+const numeroInformado = parseInt(prompt("Digite um número:"));
+let primeiroValor = 0;
+let segundoValor = 1;
+let proximoValor = segundoValor;
+
+while (proximoValor < numeroInformado) {
+  proximoValor = primeiroValor + segundoValor;
+  primeiroValor = segundoValor;
+  segundoValor = proximoValor;
+}
+
+if (proximoValor === numeroInformado) {
+  console.log(`${numeroInformado} pertence à sequência de Fibonacci.`);
+} else {
+  console.log(`${numeroInformado} não pertence à sequência de Fibonacci.`);
+}
+
+Pergunta 5)
+
+function inverteString(str) {
+  // Converte a string em um array de caracteres
+  let chars = str.split("");
+
+  // Inverte o array de caracteres
+  chars.reverse();
+
+  // Converte o array de caracteres de volta para uma string
+  let novaStr = chars.join("");
+
+  // Retorna a nova string invertida
+  return novaStr;
+}
+
+// Exemplo de uso
+let minhaStr = "Exemplo";
+let minhaStrInvertida = inverteString(minhaStr);
+console.log(minhaStrInvertida); // Output: "olpmxE"
